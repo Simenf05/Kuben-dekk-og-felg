@@ -8,14 +8,27 @@
 </head>
 <body class="flex">
     
-    <div id="personinfo" class="flex">
+    <h2 id="questionsHeader">Svar på noen spørsmål først</h2>
+    <div id="personInfo" class="flex">
 
+        <label for="nameInput">Navn</label>
+        <input type="text" class="m-10 info" name="nameInput" onkeydown="return /[A-Za-z ]/.test(event.key)">
+
+        <label for="telephoneInput">Telefonnummer</label>
+        <input type="tel" class="m-10 info" name="telephoneInput" maxlength="8" onkeydown="return /[0-9]|Backspace/.test(event.key)">
+
+        <label for="carNumberInput">Bilregistreringsnummer</label>
+        <input type="number" class="m-10 info" name="carNumberInput">
+
+        <button id="infoButton" class="m-10">Enter</button>
 
     </div>
 
-
-    <div id="dekkContainer" class="flex">
-
+    <button id="changeInfo">Endre personinfo</button>
+    
+    <h2 id="dekkHeader">Våre dekk</h2>
+    <div id="dekkContainer">
+        
 
 
     </div>

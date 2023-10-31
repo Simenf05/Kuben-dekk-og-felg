@@ -1,11 +1,32 @@
-
-
-#personinfo {
-    
+body {
+    flex-direction: column;
+    align-items: center;
 }
 
-#dekk {
+ul {
+    padding: 0;
+}
+
+#personInfo {
+    flex-direction: column;
+}
+
+.m-10 {
+    margin: 10px;
+}
+
+#changeInfo {
     display: none;
+}
+
+#dekkHeader {
+    display: none;
+}
+
+#dekkContainer {
+    display: none;
+    gap: 10px;
+    grid-template-columns: auto auto auto;
 }
 
 #kvittering {
@@ -17,3 +38,19 @@
     display: flex;
 }
 
+.dekkBox {
+    border: 1px solid lightgray;
+    border-radius: 5%;
+
+    flex-direction: row;
+
+    padding: 10px;
+}
+
+.dekkBox img, div, button {
+    padding: 10px;
+}
+
+.dekkImg {
+    width: 100px;
+}

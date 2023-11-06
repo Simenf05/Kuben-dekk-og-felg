@@ -35,6 +35,9 @@ infoButtonEl.onclick = () => {
 }
 
 
+const cart = []
+
+
 const dekkArr = [
     {
         diameter: 15,
@@ -57,9 +60,14 @@ const dekkArr = [
     
 ]
 
+function addToCart(e) {
+
+    cart.push(e.target.value)
+
+}
 
 
-dekkArr.forEach(dekk => {    
+dekkArr.forEach((dekk, i) => {
     const dekkEl = document.createElement("div")
     dekkEl.className = "dekkBox flex"
 
@@ -91,19 +99,18 @@ dekkArr.forEach(dekk => {
 
     const addToCartEl = document.createElement("button")
     addToCartEl.innerText = "Add to cart"
+    addToCartEl.value = `${i}`
+    addToCartEl.onclick = addToCart
 
     dekkEl.appendChild(addToCartEl)
 
 
     dekkContainerEl.appendChild(dekkEl)
-    
 })
 
 
 
-const felger = [
 
-]
 
 
 
